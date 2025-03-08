@@ -19,9 +19,20 @@ jobs:
       - name: Setup Pharo
         uses: hpi-swa/setup-pharo@v1
         with:
-          version: 12.0 # Assurez-vous que "smalltalk-version" est bien "version"
+          version: 12.0
 
-      - name: Run tests
+      - name: Load project
         run: |
-          echo "Running tests in Pharo"
+          pharo Pharo.image eval "
+          Metacello new
+            baseline: 'MatrixProject';
+            repository: 'filetree://.';
+            load."
+
+      - name: Run Tests
+        run: |
+          pharo Pharo.image eval "
+          (TestSuite new
+            addAllTestCasesFromCategory: 'MatrixProject-Tests';
+            run) asString."
 
