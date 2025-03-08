@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "MatrixProject",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"values",
+		"indices",
+		"rows",
+		"cols"
+	],
+	"name" : "SparseMatrix",
+	"type" : "normal"
+}
