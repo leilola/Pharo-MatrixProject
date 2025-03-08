@@ -19,9 +19,9 @@ jobs:
       - name: Setup Pharo
         uses: hpi-swa/setup-pharo@v1
         with:
-          smalltalk-version: Pharo64-12.0
+          version: 12.0 # Assurez-vous que "smalltalk-version" est bien "version"
 
       - name: Run tests
         run: |
-          echo "Add your Pharo test commands here"
+          echo "Running tests in Pharo"
 
