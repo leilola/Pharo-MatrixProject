@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Pharo
+        uses: hpi-swa/setup-pharo@v1
+        with:
+          smalltalk-version: Pharo64-12.0
+
+      - name: Run tests
+        run: |
+          echo "Add your Pharo test commands here"
+
