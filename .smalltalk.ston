@@ -1,10 +1,18 @@
-SmalltalkCISpec {
-  #loading : {
+SmalltalkCISpec { 
+  # smalltalk : 'Pharo64-12.0',  # Vérifie bien la version utilisée
+
+  # Chargement du projet avec Metacello
+  loading: [
     SCIMetacelloLoadSpec {
-      #baseline : 'Pharo-MatrixProject',
-      #directory : 'src',
-      #platforms : [ #pharo ]
+      # Nom du Baseline correspondant à ton projet
+      baseline: 'MatrixProject',
+      directory: '.'  # Laisse à '.' si le baseline est bien dans la racine
     }
-  }
+  ],
+
+  # Exécution des tests du package `MatrixProject-Tests`
+  test: [
+    'MatrixProject-Tests'  
+  ]
 }
 
