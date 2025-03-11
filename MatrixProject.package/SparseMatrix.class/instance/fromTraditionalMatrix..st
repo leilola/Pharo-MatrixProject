@@ -5,14 +5,14 @@ fromTraditionalMatrix: matrix
     rows := matrix size.
     cols := matrix first size.
 
-    "Parcours de la matrice pour stocker les valeurs non nulles"
+    "Iterating through the matrix to store non-zero values"
     1 to: rows do: [ :i |
         1 to: cols do: [ :j |
             | value |
             value := (matrix at: i) at: j.
             (value ~= 0) ifTrue: [
                 values add: value.
-                indices add: (i @ j). "Stocke en base 1"
+                indices add: (i @ j). "Indexing starts at 1 (base 1)"
             ].
         ].
     ].
