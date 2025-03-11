@@ -20,5 +20,6 @@ The tests ensure correct behavior of the matrix operations and logic.
 
 ### Testing
 All tests were successfully executed using **DrTests**.
-![Matrix Test Result](images/Matrix.png)
+![Matrix Test Result](image/Matrix.png)
+
 
